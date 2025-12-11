@@ -1,4 +1,4 @@
-# CV Generation Project
+# Computer Vision Image Generation Project
 
 This project contains implementations of DDPM (Denoising Diffusion Probabilistic Models) and VAE (Variational Autoencoder) for generative modeling, along with quantitative  and qualitative analysis.
 
