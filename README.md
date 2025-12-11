@@ -29,7 +29,8 @@ This subfolder contains model variants specifically optimized for quantitative a
 
 2. **VAE_for_QA.ipynb** - VAE variant used for image generation during the quantitative analysis phase.
 
-3. **generated_data/** - Contains `.npy` files with saved generated samples from both DDPM and VAE models.
+### Generated Data
+The `Quantitative_Analysis/generated_data/` folder contains `.npy` files with saved generated samples from both DDPM and VAE models used for quantitative analysis.
 
 ## Saved DDPM Models
 The `Saved_DDPM/` folder contains pre-trained Keras model files:
