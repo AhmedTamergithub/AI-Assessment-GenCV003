@@ -21,26 +21,43 @@ Contains VAE (Variational Autoencoder) implementations:
 ### Running_Models/
 Contains notebooks for running pre-trained models:
 
-1. **Running_Models/DDPM_Running.ipynb** - Run pre-trained DDPM model
-2. **Running_Models/VAE_Running.ipynb** - Run pre-trained VAE model
+1. **[Running_Models/DDPM_Running.ipynb](Running_Models/DDPM_Running.ipynb)** - Run pre-trained DDPM model
+2. **[Running_Models/VAE_Running.ipynb](Running_Models/VAE_Running.ipynb)** - Run pre-trained VAE model
 
 ### Quantitative_Analysis/
-Contains quantitative analysis and model variants:
+Contains quantitative analysis, model variants optimized for analysis, and generated data:
 
-- **[Quantitative_Analysis/Quantitaive_Analysis.ipynb](Quantitative_Analysis/Quantitaive_Analysis.ipynb)** - Main quantitative analysis notebook comparing DDPM and VAE generated data
+#### Main Analysis Notebook
+- **[Quantitative_Analysis/Quantitaive_Analysis.ipynb](Quantitative_Analysis/Quantitaive_Analysis.ipynb)** - Main quantitative analysis notebook that compares and evaluates DDPM and VAE generated data using various metrics.
 
 #### Model_variants_for_QA (Model Variants for Quantitative Analysis)
-This subfolder contains model variants specifically optimized for quantitative analysis:
+This subfolder contains optimized model variants specifically designed for quantitative analysis with reduced computation time:
 
-1. **Quantitative_Analysis/Model_variants_for_QA/DDPM_T1000_for_QA.ipynb** - DDPM implementation with 1000 timesteps (instead of 4000 steps in the standard implementation) to accelerate image generation needed for metrics computation.
+1. **[Quantitative_Analysis/Model_variants_for_QA/DDPM_T1000_for_QA.ipynb](Quantitative_Analysis/Model_variants_for_QA/DDPM_T1000_for_QA.ipynb)** - DDPM with 1000 timesteps (vs 4000 in standard implementation) for accelerated image generation during metrics computation.
 
-2. **Quantitative_Analysis/Model_variants_for_QA/VAE_for_QA.ipynb** - VAE variant used for image generation during the quantitative analysis phase.
+2. **[Quantitative_Analysis/Model_variants_for_QA/VAE_for_QA.ipynb](Quantitative_Analysis/Model_variants_for_QA/VAE_for_QA.ipynb)** - VAE variant used for image generation during the quantitative analysis phase.
 
 #### Generated Data
-The **Quantitative_Analysis/generated_data/** folder contains `.npy` files with saved generated samples from both DDPM and VAE models used for quantitative analysis.
+The **[Quantitative_Analysis/generated_data/](Quantitative_Analysis/generated_data/)** folder contains pre-generated `.npy` files:
+- Generated samples from DDPM model
+- Generated samples from VAE model
 
-### Saved_DDPM/
-The `Saved_DDPM/` folder contains pre-trained Keras model files:
+### Saved_Models/
+The `Saved_Models/` folder contains pre-trained model weights organized by model type:
 
-- **diffusion_4000.keras** - Standard DDPM implementation trained with 4000 timesteps.
-- **diffusion_1000.keras** - DDPM variant trained with 1000 timesteps, used during the quantitative analysis phase for faster computation.
+#### DDPM/
+Contains pre-trained DDPM model files:
+- **[Saved_Models/DDPM/diffusion_4000.keras](Saved_Models/DDPM/diffusion_4000.keras)** - Standard DDPM implementation trained with 4000 timesteps.
+- **[Saved_Models/DDPM/diffusion_1000.keras](Saved_Models/DDPM/diffusion_1000.keras)** - DDPM variant trained with 1000 timesteps, used during the quantitative analysis phase for faster computation.
+
+#### VAE/
+Contains pre-trained VAE decoder weights:
+- **[Saved_Models/Vae/variational_decoder_weights.h5](Saved_Models/Vae/variational_decoder_weights.h5)** - VAE decoder weights used for image generation.
+
+## Generated Examples from DDPM & VAE
+
+### DDPM Generated Images
+![DDPM Generated Images](images/ddpm_generated_images.png)
+
+### VAE Generated Images
+![VAE Generated Images](images/vae_generated_images.png)
