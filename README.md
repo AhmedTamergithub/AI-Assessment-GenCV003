@@ -5,6 +5,25 @@ This project contains implementations of DDPM (Denoising Diffusion Probabilistic
 ## Project Report
 For a detailed report of this project, please view: [GenCV003_Report.pdf](GenCV003_Report.pdf)
 
+
+
+## How to Run the 2 Models
+
+### DDPM Model
+To run the pre-trained DDPM model and generate images:
+
+1. Open the notebook: **[Running_Models/DDPM_Running.ipynb](Running_Models/DDPM_Running.ipynb)**
+2. Execute all cells from top to bottom
+
+### VAE Model
+To run the pre-trained VAE model and generate images:
+
+1. Open the notebook: **[Running_Models/VAE_Running.ipynb](Running_Models/VAE_Running.ipynb)**
+2. Execute all cells from top to bottom
+
+
+
+
 ## Repo Files Structure
 
 ### DDPM/
@@ -54,19 +73,6 @@ Contains pre-trained DDPM model files:
 Contains pre-trained VAE decoder weights:
 - **[Saved_Models/Vae/variational_decoder_weights.h5](Saved_Models/Vae/variational_decoder_weights.h5)** - VAE decoder weights used for image generation.
 
-## How to Run the 2 Models
-
-### DDPM Model
-To run the pre-trained DDPM model and generate images:
-
-1. Open the notebook: **[Running_Models/DDPM_Running.ipynb](Running_Models/DDPM_Running.ipynb)**
-2. Execute all cells from top to bottom
-
-### VAE Model
-To run the pre-trained VAE model and generate images:
-
-1. Open the notebook: **[Running_Models/VAE_Running.ipynb](Running_Models/VAE_Running.ipynb)**
-2. Execute all cells from top to bottom
 
 ## Generated Examples from DDPM & VAE
 
